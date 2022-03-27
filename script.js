@@ -1,6 +1,10 @@
 // Select the grid container
 const gridContainer = document.querySelector(".grid-container");
 
+// Select the controls buttons
+const clearGrid = document.querySelector("#clear-grid");
+const setGridSize = document.querySelector("#set-grid");
+
 function createGrid(width = 320, numOfSquares = 16) {
   gridContainer.innerHTML = "";
 
@@ -17,14 +21,12 @@ function createGrid(width = 320, numOfSquares = 16) {
       gridContainer.appendChild(gridItem);
     }
   }
+
+  const gridItems = document.querySelectorAll(".grid-item");
+  hoverGrid(gridItems);
 }
 
-createGrid();
-
-// Select the grid items
-const gridItems = document.querySelectorAll(".grid-item");
-
-function hoverGrid() {
+function hoverGrid(gridItems) {
   gridItems.forEach((item) => {
     item.addEventListener("mouseover", () => {
       item.style.backgroundColor = "#F4CAE0";
@@ -32,11 +34,7 @@ function hoverGrid() {
   });
 }
 
-hoverGrid();
-
-// Select the controls buttons
-const clearGrid = document.querySelector("#clear-grid");
-const setGridSize = document.querySelector("#set-grid");
+createGrid();
 
 clearGrid.addEventListener("click", () => {
   gridItems.forEach((item) => {
