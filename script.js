@@ -15,3 +15,13 @@ gridItems.forEach((item) => {
     item.style.backgroundColor = "#F4CAE0";
   });
 });
+
+// Select the controls buttons
+const clearGrid = document.querySelector("#clear-grid");
+const setGridSize = document.querySelector("#set-grid");
+
+clearGrid.addEventListener("click", () => {
+  gridItems.forEach((item) => {
+    item.style.backgroundColor = "#FFF";
+  });
+});
