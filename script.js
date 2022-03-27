@@ -29,7 +29,7 @@ function createGrid(width = 320, numOfSquares = 16) {
 function hoverGrid(gridItems) {
   gridItems.forEach((item) => {
     item.addEventListener("mouseover", () => {
-      item.style.backgroundColor = "#F4CAE0";
+      item.style.backgroundColor = "#d7b9d5";
     });
   });
 }
