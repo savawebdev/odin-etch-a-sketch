@@ -37,6 +37,8 @@ function hoverGrid(gridItems) {
 createGrid();
 
 clearGrid.addEventListener("click", () => {
+  const gridItems = document.querySelectorAll(".grid-item");
+
   gridItems.forEach((item) => {
     item.style.backgroundColor = "#FFF";
   });
